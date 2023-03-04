@@ -4,6 +4,7 @@ import Form from './componentes/form';
 
 
 
+
 function App() {
   return (
 
@@ -12,6 +13,7 @@ function App() {
       
       <Banner />
       <Form />
+      
 
 
       

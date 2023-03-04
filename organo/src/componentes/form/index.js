@@ -1,6 +1,19 @@
 import  './form.css'
 import CampoTexto from '../CampoTexto/CampoTexto'
+import ListaSuspensa from '../Lista Suspensa'
 
+
+
+const times = [
+    'Programação',
+    'Front-End',
+    'Data Science',
+    'Devops',
+    'Ux e Design',
+    'Mobile',
+    'Inovação e Gestão'
+  
+  ]
 
 
 const Form = () => {
@@ -15,6 +28,7 @@ const Form = () => {
             <CampoTexto  label="Nome" placeholder="Digite seu nome"/>
             <CampoTexto  label="Cargo" placeholder="Digite seu cargo"/>
             <CampoTexto  label="Imagem" placeholder="Insira sua imagem"/>
+            <ListaSuspensa itens={times}/>
             </form>
 
     
