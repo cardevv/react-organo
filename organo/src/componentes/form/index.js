@@ -1,6 +1,7 @@
 import  './form.css'
 import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaSuspensa from '../Lista Suspensa'
+import Botao from '../botao'
 
 
 
@@ -28,7 +29,10 @@ const Form = () => {
             <CampoTexto  label="Nome" placeholder="Digite seu nome"/>
             <CampoTexto  label="Cargo" placeholder="Digite seu cargo"/>
             <CampoTexto  label="Imagem" placeholder="Insira sua imagem"/>
-            <ListaSuspensa itens={times}/>
+            <ListaSuspensa label="Time" itens={times}/>
+            <Botao>
+                Cria Card
+            </Botao>
             </form>
 
     
