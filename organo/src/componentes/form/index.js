@@ -9,7 +9,7 @@ import {useState} from 'react'
 
 
 
-const Form = () => {
+const Form = (props) => {
 
     const times = [
         'Programação',
@@ -32,7 +32,13 @@ const Form = () => {
         evento.preventDefault()
 
         
-        console.log('Formulario foi enviado! =>', nome , cargo , imagem, time )
+        props.aoCadastrar({
+            nome,
+            cargo,
+            imagem,
+            time
+
+        })
 
 
       }
