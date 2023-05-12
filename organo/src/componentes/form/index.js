@@ -16,7 +16,7 @@ const Form = (props) => {
       const [nome, setNome] = useState('')
       const [cargo, setCargo] = useState('')
       const [imagem, setImagem] = useState('')
-      const [time, setTime] = useState('')
+      const [time, setTime] = useState('Programação')
 
       const Salvaform = (evento) => {
 

@@ -70,7 +70,17 @@ function App() {
       <Banner />
       <Form  times={times.map(time => time.nome)}  aoCadastrar={colaborador => aoNovoColaborador(colaborador)} />
 
-       {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>)}
+       {times.map(time => <Time 
+       key={time.nome} 
+       nome={time.nome} 
+       corPrimaria={time.corPrimaria} 
+       corSecundaria={time.corSecundaria}
+       colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+       >
+        
+
+
+       </Time>)}
 
 
       
