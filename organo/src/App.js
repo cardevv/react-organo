@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Form from './componentes/form';
 import Time from './componentes/time';
+import Rodape from './componentes/rodape';
 
 
 
@@ -81,6 +82,10 @@ function App() {
 
 
        </Time>)}
+
+       <Rodape></Rodape>
+
+
 
 
       
