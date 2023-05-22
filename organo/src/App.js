@@ -62,7 +62,8 @@ function App() {
       }
 
 
-      function aoDeletar ()  {
+      function deletarColaborador ()  {
+        
         console.log('deletando colaborador')
 
       }
@@ -83,7 +84,7 @@ function App() {
        corPrimaria={time.corPrimaria} 
        corSecundaria={time.corSecundaria}
        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-       aoDeletar={aoDeletar}
+       aoDeletar={deletarColaborador}
        >
         
 
