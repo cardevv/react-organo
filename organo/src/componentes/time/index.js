@@ -10,6 +10,7 @@ const Time = (props , aoDeletar) => {
 
     return (
         (props.colaboradores.length > 0) ? <section className='time'style={css} >
+            <input type='color' className='input-cor'></input>
             <h3 style={{borderColor: props.corPrimaria}}>
                 {props.nome}
             </h3>
