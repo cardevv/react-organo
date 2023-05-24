@@ -13,7 +13,7 @@ import Rodape from './componentes/rodape';
 
 function App() {
 
-  const times = [
+  const [times , setTimes] = useState ( [
 
     {
       nome:'Programação' ,
@@ -51,7 +51,7 @@ function App() {
       corSecundaria: '#ffeedf'
     }
 
-  ]
+  ]);
 
   const [colaboradores,setColaboradores] = useState([])
 
@@ -67,6 +67,21 @@ function App() {
         console.log('deletando colaborador')
 
       }
+
+        function mudarCordoTime(cor , nome) {
+            setTimes(times.map(time => {
+              if (time.nome === nome) {
+                time.corPrimaria = cor;
+              }
+
+              return time;
+
+            }))
+
+        }
+
+
+
   return (
 
 
@@ -79,6 +94,7 @@ function App() {
       <Form  times={times.map(time => time.nome)}  aoCadastrar={colaborador => aoNovoColaborador(colaborador)} />
 
        {times.map(time => <Time 
+       mudarCordoTime={mudarCordoTime}
        key={time.nome} 
        nome={time.nome} 
        corPrimaria={time.corPrimaria} 

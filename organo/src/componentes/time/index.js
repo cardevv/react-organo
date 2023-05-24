@@ -2,7 +2,7 @@ import Colaborador from '../Colaborador'
 import './time.css'
 
 
-const Time = (props , aoDeletar) => { 
+const Time = (props , aoDeletar, mudarCordoTime) => { 
 
     const css = {backgroundColor: props.corSecundaria}
 
@@ -10,7 +10,7 @@ const Time = (props , aoDeletar) => {
 
     return (
         (props.colaboradores.length > 0) ? <section className='time'style={css} >
-            <input type='color' className='input-cor'></input>
+            <input   onChange={evento => props.mudarCordoTime(evento.target.value, props.nome)}    value={props.corPrimaria}   type='color' className='input-cor'></input>
             <h3 style={{borderColor: props.corPrimaria}}>
                 {props.nome}
             </h3>
@@ -26,7 +26,7 @@ const Time = (props , aoDeletar) => {
                         nome={colaborador.nome} 
                         imagem={colaborador.imagem} 
                         cargo={colaborador.cargo}
-                        aoDeletar={aoDeletar}
+                        aoDeletar={props.aoDeletar}
                          
                         >
             

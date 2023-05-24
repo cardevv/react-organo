@@ -2,6 +2,7 @@
     text-align: center;
     padding: 32px;
     background-color: #d9f7e9;
+    position: relative;
 }
 
 
@@ -21,4 +22,14 @@
     justify-content: space-around;
     margin-top: 32px;
     flex-wrap: wrap;
+ }
+ 
+
+ .input-cor {
+
+    position: absolute;
+    top:  28px;
+    right: 50px;
+    border-radius: 2px;
+    
  }
