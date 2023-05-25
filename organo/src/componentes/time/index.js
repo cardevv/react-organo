@@ -1,46 +1,49 @@
 import Colaborador from '../Colaborador'
 import './time.css'
+import hexToRgba from 'hex-to-rgba';
 
 
-const Time = (props , aoDeletar, mudarCordoTime) => { 
+const Time = (time , aoDeletar, mudarCordoTime ,  ) => { 
 
-    const css = {backgroundColor: props.corSecundaria}
+    const css = {backgroundColor: hexToRgba(time.cor,'0.6'), backgroundImage:'url(/imagens/fundo.png'}
 
     
 
     return (
-        (props.colaboradores.length > 0) ? <section className='time'style={css} >
-            <input   onChange={evento => props.mudarCordoTime(evento.target.value, props.nome)}    value={props.corPrimaria}   type='color' className='input-cor'></input>
-            <h3 style={{borderColor: props.corPrimaria}}>
-                {props.nome}
+        (time.colaboradores.length > 0) ? <section className='time'style={css} >
+            <input   onChange={evento => time.mudarCordoTime(evento.target.value, time.nome)}    value={time.cor}   type='color' className='input-cor'></input>
+            <h3 style={{borderColor: time.cor}}>
+                {time.nome}
             </h3>
-            <div className='colaboradores'>{props.colaboradores.map
+            <div className='colaboradores'>{time.colaboradores.map
             
             ((colaborador) => 
             
                 {
                     console.log(<Colaborador 
-                        corDeFundo={props.corPrimaria}  
+                        corDeFundo={time.cor}  
                         key={colaborador.nome
                         } 
                         nome={colaborador.nome} 
                         imagem={colaborador.imagem} 
                         cargo={colaborador.cargo}
-                        aoDeletar={props.aoDeletar}
+                        aoDeletar={time.aoDeletar}
                          
                         >
             
             
                         </Colaborador>)
+                        console.log('times:' ,time)
+                        console.log(time.cor)
                     
                     return <Colaborador 
-                    corDeFundo={props.corPrimaria}  
+                    corDeFundo={time.cor}  
                     key={colaborador.nome
                     } 
                     nome={colaborador.nome} 
                     imagem={colaborador.imagem} 
                     cargo={colaborador.cargo}
-                    aoDeletar={props.aoDeletar}
+                    aoDeletar={time.aoDeletar}
                      
                     >
         
