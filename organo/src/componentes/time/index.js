@@ -1,9 +1,10 @@
 import Colaborador from '../Colaborador'
 import './time.css'
 import hexToRgba from 'hex-to-rgba';
+import { v4 as uuidv4 } from 'uuid';
 
 
-const Time = (time , aoDeletar, mudarCordoTime ,  ) => { 
+const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => { 
 
     const css = {backgroundColor: hexToRgba(time.cor,'0.6'), backgroundImage:'url(/imagens/fundo.png'}
 
@@ -28,15 +29,17 @@ const Time = (time , aoDeletar, mudarCordoTime ,  ) => {
                         imagem={colaborador.imagem} 
                         cargo={colaborador.cargo}
                         aoDeletar={time.aoDeletar}
+                        id={uuidv4()}
                          
                         >
             
             
                         </Colaborador>)
-                        console.log('times:' ,time)
-                        console.log(time.cor)
+                        
+                       
                     
                     return <Colaborador 
+                    id={uuidv4()}
                     corDeFundo={time.cor}  
                     key={colaborador.nome
                     } 

@@ -11,42 +11,50 @@ import Rodape from './componentes/rodape';
 
 
 
+
 function App() {
 
   const [times , setTimes] = useState ( [
 
     {
+      
       nome:'Programação' ,
       cor:'#57c278',
       
     },
     {
-      nome:        'Front-End' ,
+      
+      nome:'Front-End' ,
       cor:'#82cffa',
       
     },
     {
-      nome:        'Data Science' ,
+      
+      nome:'Data Science' ,
       cor:'#a6d157',
       
     },
     {
-      nome:        'Devops' ,
+      
+      nome:'Devops' ,
       cor:'#e06869',
       
     },
     {
-      nome:         'Ux e Design',
+      
+      nome:'Ux e Design',
       cor:'#DB6EBF',
       
     },
     {
-      nome:        'Mobile' ,
+      
+      nome:'Mobile' ,
       cor:'#ff8ao5',
       
     },
     {
-      nome:        'Inovação e Gestão' ,
+      
+      nome:'Inovação e Gestão' ,
       cor:'#ffba29',
       
     }
@@ -62,9 +70,9 @@ function App() {
       }
 
 
-      function deletarColaborador ()  {
+      function deletarColaborador (id)  {
         
-        console.log('deletando colaborador')
+        setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
 
       }
 
