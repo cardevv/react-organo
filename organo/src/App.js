@@ -5,6 +5,8 @@ import Banner from './componentes/Banner';
 import Form from './componentes/form';
 import Time from './componentes/time';
 import Rodape from './componentes/rodape';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 
@@ -14,51 +16,42 @@ import Rodape from './componentes/rodape';
 
 function App() {
 
-  const [times , setTimes] = useState ( [
-
+  const [times, setTimes] = useState([
     {
-      
-      nome:'Programação' ,
-      cor:'#57c278',
-      
+      id: uuidv4(),
+      nome: 'Programação',
+      cor: '#57C278'
     },
     {
-      
-      nome:'Front-End' ,
-      cor:'#82cffa',
-      
+      id: uuidv4(),
+      nome: 'Front-End',
+      cor: '#82CFFA'
     },
     {
-      
-      nome:'Data Science' ,
-      cor:'#a6d157',
-      
+      id: uuidv4(),
+      nome: 'Data Science',
+      cor: '#A6D157'
     },
     {
-      
-      nome:'Devops' ,
-      cor:'#e06869',
-      
+      id: uuidv4(),
+      nome: 'Devops',
+      cor: '#E06B69'
     },
     {
-      
-      nome:'Ux e Design',
-      cor:'#DB6EBF',
-      
+      id: uuidv4(),
+      nome: 'UX e Design',
+      cor: '#DB6EBF'
     },
     {
-      
-      nome:'Mobile' ,
-      cor:'#ff8ao5',
-      
+      id: uuidv4(),
+      nome: 'Mobile',
+      cor: '#FFBA05'
     },
     {
-      
-      nome:'Inovação e Gestão' ,
-      cor:'#ffba29',
-      
-    }
-
+      id: uuidv4(),
+      nome: 'Inovação e Gestão',
+      cor: '#FF8A29'
+    },
   ]);
 
   const [colaboradores,setColaboradores] = useState([])

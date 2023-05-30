@@ -29,6 +29,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                         imagem={colaborador.imagem} 
                         cargo={colaborador.cargo}
                         aoDeletar={time.aoDeletar}
+                        colaborador={colaborador}
                         id={uuidv4()}
                          
                         >
@@ -39,7 +40,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                        
                     
                     return <Colaborador 
-                    id={uuidv4()}
+                    colaborador={colaborador}
                     corDeFundo={time.cor}  
                     key={colaborador.nome
                     } 
@@ -47,6 +48,8 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                     imagem={colaborador.imagem} 
                     cargo={colaborador.cargo}
                     aoDeletar={time.aoDeletar}
+                    id={uuidv4()}
+                    
                      
                     >
         

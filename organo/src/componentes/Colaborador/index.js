@@ -5,7 +5,7 @@ import { AiFillCloseCircle} from 'react-icons/ai';
 
 
 
-const Colaborador = ({nome, imagem, cargo ,  aoDeletar , corDeFundo , id }) => {        
+const Colaborador = ({nome, imagem, cargo ,  aoDeletar , corDeFundo , id , colaborador}) => {        
  
     
     
