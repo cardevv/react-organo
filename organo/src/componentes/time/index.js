@@ -1,7 +1,7 @@
 import Colaborador from '../Colaborador'
 import './time.css'
 import hexToRgba from 'hex-to-rgba';
-import { v4 as uuidv4 } from 'uuid';
+
 
 
 const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => { 
@@ -18,7 +18,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
             </h3>
             <div className='colaboradores'>{time.colaboradores.map
             
-            ((colaborador) => 
+            ((colaborador ) => 
             
                 {
                     console.log(<Colaborador 
@@ -30,12 +30,13 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                         cargo={colaborador.cargo}
                         aoDeletar={time.aoDeletar}
                         colaborador={colaborador}
-                        id={uuidv4()}
+                        
                          
                         >
             
             
                         </Colaborador>)
+                        console.log(colaborador)
                         
                        
                     
@@ -48,7 +49,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                     imagem={colaborador.imagem} 
                     cargo={colaborador.cargo}
                     aoDeletar={time.aoDeletar}
-                    id={uuidv4()}
+                    
                     
                      
                     >

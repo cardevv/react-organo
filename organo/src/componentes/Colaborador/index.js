@@ -15,7 +15,7 @@ const Colaborador = ({nome, imagem, cargo ,  aoDeletar , corDeFundo , id , colab
             <div className='colaborador'>
                 
                 <div className='cabecalho' style={{backgroundColor: corDeFundo}} >
-                <div    className='deletar' onClick={() => aoDeletar(Colaborador.id)}
+                <div    className='deletar' onClick={() => aoDeletar(colaborador.id)}
                 
                 >  
                     <AiFillCloseCircle size={20} ></AiFillCloseCircle></div>

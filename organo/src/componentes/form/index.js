@@ -3,6 +3,7 @@ import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaSuspensa from '../Lista Suspensa'
 import Botao from '../botao'
 import {useState} from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 
 
@@ -17,6 +18,7 @@ const Form = (props) => {
       const [cargo, setCargo] = useState('')
       const [imagem, setImagem] = useState('')
       const [time, setTime] = useState('Programação')
+      const [id, setId] = useState(uuidv4());
 
       const Salvaform = (evento) => {
 
@@ -27,15 +29,18 @@ const Form = (props) => {
             nome,
             cargo,
             imagem,
-            time
+            time,
+            id
 
         })  
 
-
+        setId(uuidv4())
         setNome('')
         setCargo('')
         setImagem('')
         setTime('')
+        
+        
 
         
 
