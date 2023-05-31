@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 
 
-const Form = (props) => {
+const Form = (props , cadastrarTime) => {
 
     
 
@@ -18,6 +18,8 @@ const Form = (props) => {
       const [cargo, setCargo] = useState('')
       const [imagem, setImagem] = useState('')
       const [time, setTime] = useState('Programação')
+      const [corTime, setCorTime] = useState('')
+      const [nomeTime, setNomeTime] = useState('')
       const [id, setId] = useState(uuidv4());
 
       const Salvaform = (evento) => {
@@ -102,7 +104,53 @@ const Form = (props) => {
 
 
             <Botao>
-                Cria Card
+                Criar Card
+            </Botao>
+            </form>
+
+
+
+
+            <form  onSubmit={(evento) => 
+
+               {
+                evento.preventDefault()
+                cadastrarTime({nome: nomeTime ,cor: corTime})
+
+               
+               }
+               } >
+            <h2>Preenhca os dados parar criar um novo time.</h2>
+            <CampoTexto obrigatorio
+            label="Nome"
+            placeholder="Digite o nome do time"
+            valor={nomeTime}
+            aoAlterado={valor => setNomeTime(valor)}
+
+            />
+            
+
+
+
+            <CampoTexto 
+            obrigatorio
+            label="Cor" 
+            placeholder="Digite a cor do time"
+            valor={corTime}
+            aoAlterado={valor => setCorTime(valor)}
+            
+            />
+
+
+
+           
+
+
+           
+
+
+            <Botao>
+                Criar Time
             </Botao>
             </form>
 

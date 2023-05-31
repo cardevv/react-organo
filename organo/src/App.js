@@ -5,6 +5,7 @@ import Banner from './componentes/Banner';
 import Form from './componentes/form';
 import Time from './componentes/time';
 import Rodape from './componentes/rodape';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -86,6 +87,12 @@ function App() {
 
         }
 
+        function cadastrarTime (novoTime) {
+
+          setTimes(...times ,{...novoTime,id: uuidv4() })
+
+        }
+
 
 
   return (
@@ -97,7 +104,12 @@ function App() {
     <div className="App">
       
       <Banner />
-      <Form  times={times.map(time => time.nome)}  aoCadastrar={colaborador => aoNovoColaborador(colaborador)} />
+      <Form  
+      cadastrarTime={cadastrarTime}
+      times={times.map(time => time.nome)}   
+      aoCadastrar={colaborador => aoNovoColaborador(colaborador)} 
+
+      />
 
        {times.map(time => <Time 
        mudarCordoTime={mudarCordoTime}
