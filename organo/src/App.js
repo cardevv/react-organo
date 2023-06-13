@@ -89,7 +89,7 @@ function App() {
 
         function cadastrarTime (novoTime) {
 
-          setTimes(...times ,{...novoTime,id: uuidv4() })
+          setTimes([...times ,{...novoTime, id: uuidv4() }])
 
         }
 

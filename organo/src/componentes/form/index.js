@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 
 
-const Form = (props , cadastrarTime) => {
+const Form = (props , cadastrarTime , aoCadastrar) => {
 
     
 
@@ -111,11 +111,13 @@ const Form = (props , cadastrarTime) => {
 
 
 
-            <form  onSubmit={(evento) => 
+            <form  onSubmit={(evento , cadastrarTime) => 
 
                {
                 evento.preventDefault()
-                cadastrarTime({nome: nomeTime ,cor: corTime})
+                props.cadastrarTime({nome: nomeTime ,cor: corTime});
+                setCorTime('')
+                setNomeTime('')
 
                
                }
