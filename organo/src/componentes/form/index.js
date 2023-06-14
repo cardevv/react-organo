@@ -1,5 +1,5 @@
 import  './form.css'
-import CampoTexto from '../CampoTexto/CampoTexto'
+import Campo from '../Campo/Campo'
 import ListaSuspensa from '../Lista Suspensa'
 import Botao from '../botao'
 import {useState} from 'react'
@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 
 
-const Form = (props , cadastrarTime , aoCadastrar) => {
+const Form = (props , cadastrarTime , aoCadastrar , ) => {
 
     
 
@@ -60,7 +60,7 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
 
             <form  onSubmit={Salvaform} >
             <h2>Preenhca os dados parar criar o card do colaborador</h2>
-            <CampoTexto obrigatorio={true} 
+            <Campo obrigatorio={true} 
             label="Nome"
             placeholder="Digite seu nome"
             valor={nome}
@@ -71,7 +71,7 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
 
 
 
-            <CampoTexto 
+            <Campo 
             obrigatorio={true} 
             label="Cargo" 
             placeholder="Digite seu cargo"
@@ -82,7 +82,7 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
 
 
 
-            <CampoTexto
+            <Campo
             
             
             label="Imagem" 
@@ -123,7 +123,7 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
                }
                } >
             <h2>Preenhca os dados parar criar um novo time.</h2>
-            <CampoTexto obrigatorio
+            <Campo obrigatorio
             label="Nome"
             placeholder="Digite o nome do time"
             valor={nomeTime}
@@ -134,7 +134,8 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
 
 
 
-            <CampoTexto 
+            <Campo 
+            type='color'
             obrigatorio
             label="Cor" 
             placeholder="Digite a cor do time"
@@ -142,6 +143,8 @@ const Form = (props , cadastrarTime , aoCadastrar) => {
             aoAlterado={valor => setCorTime(valor)}
             
             />
+
+            
 
 
 
