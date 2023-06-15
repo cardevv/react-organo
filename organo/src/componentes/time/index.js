@@ -4,7 +4,7 @@ import hexToRgba from 'hex-to-rgba';
 
 
 
-const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => { 
+const Time = (time , aoDeletar, mudarCordoTime , colaborador , aoFavoritar ) => { 
 
     const css = {backgroundColor: hexToRgba(time.cor,'0.6'), backgroundImage:'url(/imagens/fundo.png'}
 
@@ -49,6 +49,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador ) => {
                     imagem={colaborador.imagem} 
                     cargo={colaborador.cargo}
                     aoDeletar={time.aoDeletar}
+                    aoFavoritar={aoFavoritar}
                     
                     
                      

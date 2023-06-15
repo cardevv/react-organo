@@ -93,6 +93,22 @@ function App() {
 
         }
 
+        function resolverFavorito(id) {
+
+          setColaboradores(colaboradores.map( colaborador=> {
+
+            if(colaborador.id === id ) colaborador.favorito = !colaborador.favorito
+
+            return colaborador
+
+
+          }) )
+
+
+
+
+        }
+
 
 
   return (
@@ -112,6 +128,8 @@ function App() {
       />
 
        {times.map(time => <Time 
+
+       aoFavoritar={resolverFavorito}
        mudarCordoTime={mudarCordoTime}
        key={time.nome} 
        nome={time.nome} 
