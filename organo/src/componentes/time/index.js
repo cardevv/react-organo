@@ -30,6 +30,7 @@ const Time = (time , aoDeletar, mudarCordoTime , colaborador , aoFavoritar ) => 
                         cargo={colaborador.cargo}
                         aoDeletar={time.aoDeletar}
                         colaborador={colaborador}
+                        aoFavoritar={aoFavoritar}
                         
                          
                         >

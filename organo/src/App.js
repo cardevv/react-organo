@@ -93,7 +93,7 @@ function App() {
 
         }
 
-        function resolverFavorito(id) {
+        function aoFavoritar(id) {
 
           setColaboradores(colaboradores.map( colaborador=> {
 
@@ -129,7 +129,7 @@ function App() {
 
        {times.map(time => <Time 
 
-       aoFavoritar={resolverFavorito}
+       aoFavoritar={aoFavoritar}
        mudarCordoTime={mudarCordoTime}
        key={time.nome} 
        nome={time.nome} 
