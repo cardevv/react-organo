@@ -1,7 +1,7 @@
 
 
 import { useState } from 'react';
-import Banner from './componentes/Banner';
+import Banner from './componentes/Banner'
 import Form from './componentes/form';
 import Time from './componentes/time';
 import Rodape from './componentes/rodape';
@@ -119,7 +119,7 @@ function App() {
         
     <div className="App">
       
-      <Banner />
+      <Banner EnderecoImagem='/imagens/banner.png' TextoAlt='Banner' />
       <Form  
       cadastrarTime={cadastrarTime}
       times={times.map(time => time.nome)}   
