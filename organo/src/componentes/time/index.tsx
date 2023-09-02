@@ -1,10 +1,21 @@
+import { IColaborador } from '../../shared/Interfaces/IColaborador';
 import Colaborador from '../Colaborador'
 import './time.css'
 import hexToRgba from 'hex-to-rgba';
 
+interface TimeProps {
+cor: string
+nome: string
+colaboradores: IColaborador[]
 
 
-const Time = (time , aoDeletar, mudarCordoTime , colaborador , aoFavoritar ) => { 
+
+    
+}
+
+
+
+const Time = (time , aoDeletar, mudarCordoTime , colaborador , aoFavoritar  ) => { 
 
     const css = {backgroundColor: hexToRgba(time.cor,'0.6'), backgroundImage:'url(/imagens/fundo.png'}
 
